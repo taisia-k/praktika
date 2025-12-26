@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static int findMax(int[] a) {
@@ -9,7 +11,17 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[] a = {5, 2, 9, 1};
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("n = ");
+        int n = sc.nextInt();
+
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("a[" + i + "] = ");
+            a[i] = sc.nextInt();
+        }
+
         System.out.println("Max: " + findMax(a));
     }
 }
