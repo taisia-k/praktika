@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int findMax(int[] a) {
-        int mx = a[0];
+    public static int findMin(int[] a) {
+        int mn = a[0];
         for (int i = 1; i < a.length; i++) {
-            if (a[i] > mx) mx = a[i];
+            if (a[i] < mn) mn = a[i];
         }
-        return mx;
+        return mn;
     }
 
     public static void main(String[] args) {
@@ -22,6 +22,6 @@ public class Main {
             a[i] = sc.nextInt();
         }
 
-        System.out.println("Max: " + findMax(a));
+        System.out.println("Min: " + findMin(a));
     }
 }
